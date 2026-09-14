@@ -3,16 +3,18 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kindness Universe™ — Stories Growing Kindness | Grace Frank</title>
-<meta name="description" content="Kindness Universe™ by Grace Frank — magical stories that help little hearts grow through kindness, courage and friendship. Meet Truly the Turtle, Gracie the Goose and Hope the Hedgehog." />
-<link rel="icon" href="assets/web/logo.webp" />
+<title>Grace Frank Books — Stories Growing Kindness</title>
+<meta name="description" content="Grace Frank Books — magical stories that help little hearts grow through kindness, courage and friendship. Meet Truly the Turtle, Gracie the Goose and Hope the Hedgehog." />
+<link rel="icon" href="assets/web/symbol.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   KINDNESS UNIVERSE — Homepage mockup
-   Visual system: Purple + Teal + Gold = corporate Kindness Universe
+   GRACE FRANK BOOKS — Homepage mockup
+   A Wisdom Production Group company. Interim public brand ahead of the
+   planned Kindessa transition — no Kindness Universe wordmark is used.
+   Visual system: Purple + Teal + Gold
    ============================================================ */
 
 :root{
@@ -199,16 +201,22 @@ body.nav-open .mobile-nav{transform:translateY(0)}
 .hero-inner{position:relative;text-align:center;padding:calc(var(--header-h) + 1.6rem) 0 4.6rem;width:100%}
 .hero .eyebrow{color:var(--gold-light);justify-content:center;letter-spacing:.34em}
 .hero .eyebrow::before{background:var(--gold-light)}
-.hero h1{margin:0 auto 1.4rem;width:min(500px,72vw,42vh);position:relative}
-.hero h1 img{
-  width:100%;height:auto;aspect-ratio:1;border-radius:50%;
-  filter:drop-shadow(0 30px 60px rgba(16,2,36,.55));
+/* the interim mark carries no wordmark, so the name is set in type below it */
+.hero-mark{
+  position:relative;display:block;margin:0 auto .9rem;
+  width:min(250px,44vw,25vh);height:auto;aspect-ratio:1;border-radius:50%;
+  filter:drop-shadow(0 24px 52px rgba(16,2,36,.55));
   animation:heroLogo 9s ease-in-out infinite;
 }
-.hero h1::before{
-  content:"";position:absolute;inset:-14%;border-radius:50%;z-index:-1;
-  background:radial-gradient(circle,rgba(255,225,160,.45),rgba(255,225,160,0) 62%);
-  animation:pulseGlow 8s ease-in-out infinite;
+.hero h1{
+  margin:0 auto .28em;max-width:16ch;
+  font-size:clamp(2.4rem,6vw,4.5rem);font-weight:800;color:#fff;
+  text-shadow:0 4px 34px rgba(16,2,36,.6),0 2px 10px rgba(16,2,36,.5);
+}
+.hero-sub{
+  font-family:'Baloo 2',cursive;font-weight:700;
+  font-size:clamp(1.15rem,2.4vw,1.85rem);color:var(--gold-light);
+  text-shadow:0 3px 22px rgba(20,4,40,.6);margin:0 0 .7em;
 }
 @keyframes heroLogo{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(1.2deg)}}
 .hero-copy{color:rgba(255,255,255,.94);font-size:clamp(1.02rem,1.6vw,1.24rem);max-width:38ch;margin:0 auto 1.9rem;text-shadow:0 2px 16px rgba(20,4,40,.7)}
@@ -729,8 +737,8 @@ section{position:relative}
 <!-- ============================ HEADER ============================ -->
 <header class="header" id="header">
   <div class="wrap-wide header-inner">
-    <a class="brand" href="#top" aria-label="Kindness Universe — home">
-      <img src="assets/web/symbol.webp" alt="Kindness Universe" width="320" height="318" />
+    <a class="brand" href="#top" aria-label="Grace Frank Books — home">
+      <img src="assets/web/symbol.webp" alt="Grace Frank Books" width="320" height="318" />
     </a>
 
     <nav class="nav" aria-label="Main">
@@ -743,7 +751,7 @@ section{position:relative}
     </nav>
 
     <div class="header-cta">
-      <a class="btn-join" href="#join">Join the Universe <span class="heart-mini">💜</span></a>
+      <a class="btn-join" href="#join">Join the Adventure <span class="heart-mini">💜</span></a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span></button>
     </div>
   </div>
@@ -756,7 +764,7 @@ section{position:relative}
   <a href="#kindness">Kindness in Action</a>
   <a href="#shop">Shop</a>
   <a href="#about">About</a>
-  <a class="btn btn-purple" href="#join">Join the Universe 💜</a>
+  <a class="btn btn-purple" href="#join">Join the Adventure 💜</a>
 </nav>
 
 <!-- ============================ HERO ============================ -->
@@ -769,16 +777,15 @@ section{position:relative}
 
   <div class="wrap hero-inner">
     <span class="eyebrow">Welcome to</span>
-    <h1>
-      <span class="sr-only">Kindness Universe™ — Stories Growing Kindness</span>
-      <img src="assets/web/logo.webp" alt="Kindness Universe — Stories Growing Kindness" width="600" height="600" />
-    </h1>
+    <img class="hero-mark" src="assets/web/symbol.webp" alt="" role="presentation" width="320" height="318" />
+    <h1>Grace Frank Books</h1>
+    <p class="hero-sub">Stories Growing Kindness</p>
     <p class="hero-copy">Discover magical stories that help little hearts grow through kindness, courage and friendship.</p>
     <div class="hero-btns">
       <a class="btn btn-gold" href="#worlds">Explore the Stories</a>
       <a class="btn btn-ghost-light" href="#watch">Watch Bedtime Stories</a>
     </div>
-    <p class="hero-credit">A storytelling universe created by <b>Grace Frank</b></p>
+    <p class="hero-credit">A <b>Wisdom Production Group</b> company</p>
   </div>
 
   <div class="scroll-hint" aria-hidden="true">Scroll<i></i></div>
@@ -905,7 +912,7 @@ section{position:relative}
         <span class="stage-emoji">🌿</span>
         <span class="stage-age">Ages 6–8 · Explore</span>
         <h3>Chapter Books</h3>
-        <p class="stage-kind">Kindness Universe</p>
+        <p class="stage-kind">The chapter book series</p>
         <p>Bigger adventures about trust, belonging, courage and compassion.</p>
       </article>
 
@@ -1086,9 +1093,9 @@ section{position:relative}
   <div class="wrap">
     <div class="reveal">
       <img class="big-heart" src="assets/web/form-heart.webp" alt="" role="presentation" width="772" height="420" />
-      <span class="eyebrow" style="color:var(--teal)">Join the Kindness Universe</span>
+      <span class="eyebrow" style="color:var(--teal)">Join the Adventure</span>
       <h2 class="h-2">Let's Grow Kindness Together</h2>
-      <p class="lede muted" style="margin-inline:auto">Join the Kindness Universe family for:</p>
+      <p class="lede muted" style="margin-inline:auto">Join the Grace Frank Books family for:</p>
       <p class="join-bullets">
         <span>New stories</span><span>Free activities</span><span>Kindness challenges</span><span>Behind-the-scenes adventures</span><span>Special announcements</span>
       </p>
@@ -1105,9 +1112,9 @@ section{position:relative}
       <input id="fname" name="fname" type="text" placeholder="First name" autocomplete="given-name" required />
       <label class="sr-only" for="email" style="position:absolute;left:-9999px">Email address</label>
       <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
-      <button class="btn btn-purple" type="submit">Join the Universe <span class="heart-mini">💜</span></button>
+      <button class="btn btn-purple" type="submit">Join the Adventure <span class="heart-mini">💜</span></button>
     </form>
-    <p class="form-thanks" id="formThanks">🎉 Welcome to the Universe! Check your inbox for Truly's adventure.</p>
+    <p class="form-thanks" id="formThanks">🎉 Welcome aboard! Check your inbox for Truly's adventure.</p>
     <p class="privacy reveal">Grown-ups only. We respect your privacy.</p>
   </div>
 </section>
@@ -1124,7 +1131,7 @@ section{position:relative}
   <div class="wrap">
     <div class="creator-grid">
       <figure class="portrait reveal">
-        <img src="assets/web/grace-frank.jpg" alt="Grace Frank, author and creator of Kindness Universe" />
+        <img src="assets/web/grace-frank.jpg" alt="Grace Frank, author and storyteller" />
         <figcaption class="portrait-caption">Grace Frank · Author</figcaption>
       </figure>
       <div class="reveal d1">
@@ -1134,7 +1141,7 @@ section{position:relative}
         <p class="sig">— Grace Frank</p>
         <div class="creator-btns">
           <a class="btn btn-purple" href="#about">Meet Grace</a>
-          <a class="btn btn-ghost" href="#about">The Story Behind Kindness Universe</a>
+          <a class="btn btn-ghost" href="#about">The Story Behind the Books</a>
         </div>
       </div>
     </div>
@@ -1201,8 +1208,8 @@ section{position:relative}
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/web/logo.webp" alt="Kindness Universe logo" />
-        <h3>Kindness Universe</h3>
+        <img src="assets/web/symbol.webp" alt="Grace Frank Books" />
+        <h3>Grace Frank Books</h3>
         <p class="tag">Stories Growing Kindness</p>
       </div>
 
@@ -1225,7 +1232,7 @@ section{position:relative}
     </div>
 
     <div class="footer-bottom">
-      <p style="margin:0">A <strong>Wisdom Production Group</strong> Brand · © 2026 Kindness Universe™</p>
+      <p style="margin:0">© 2026 <strong>Wisdom Production Group LLC</strong> · All rights reserved</p>
       <nav class="footer-legal" aria-label="Legal">
         <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a><a href="#">Copyright</a>
       </nav>
