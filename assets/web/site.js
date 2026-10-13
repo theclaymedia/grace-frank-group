@@ -74,9 +74,8 @@
     }
   });
 
-  /* ---------- bubbles in the Truly section ---------- */
-  const bubbleHost = document.getElementById('bubbles');
-  if (bubbleHost){
+  /* ---------- bubbles in any underwater section ---------- */
+  document.querySelectorAll('.bubbles').forEach(bubbleHost => {
     // three size buckets — small, medium and big — so the water feels alive
     const buckets = [
       { count:26, min:5,  max:14, dur:[16,26] },   // small
@@ -96,7 +95,7 @@
         bubbleHost.appendChild(b);
       }
     });
-  }
+  });
 
   /* ---------- twilight stars in the bedtime section ---------- */
   const night = document.getElementById('night');
