@@ -14,7 +14,7 @@
 <body>
 
 <!-- ============================ HEADER ============================ -->
-<header class="header" id="header">
+<header class="header scrolled" id="header" data-solid>
   <div class="wrap-wide header-inner">
     <a class="brand" href="index.html#top" aria-label="Kindessa — home">
       <img src="assets/web/kindessa-logo.webp" alt="Kindessa" width="900" height="900" />
@@ -48,26 +48,21 @@
 
 <!-- ============================ HERO ============================ -->
 <main id="top">
-<section class="hero">
-  <div class="hero-bg" id="heroBg">
-    <img src="assets/web/universe-hero.jpg" alt="A watercolor world where Tidepool Town, Willow Brook Farm and Whispering Woods are joined by a glowing golden path" />
-  </div>
-  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+<section class="hero-banner">
+  <div class="wrap">
+    <h1 class="sr-only">Kindessa — Stories That Make a Kinder World</h1>
 
-  <div class="wrap hero-inner">
-    <span class="eyebrow">Welcome to</span>
-    <img class="hero-mark" src="assets/web/kindessa-logo.webp" alt="Kindessa" width="900" height="900" />
-    <h1>Stories Growing Kindness</h1>
-    <p class="hero-sub">Books by Grace Frank</p>
-    <p class="hero-copy">Discover magical stories that help little hearts grow through kindness, courage and friendship.</p>
-    <div class="hero-btns">
+    <picture class="banner reveal">
+      <source media="(max-width:720px)" srcset="assets/web/banner-home-mobile.webp" width="768" height="1376" />
+      <img src="assets/web/banner-home.webp" alt="Kindessa, Stories That Make a Kinder World. Truly the Turtle, Gracie the Goose, Hope the Hedgehog and their friends across the ocean, the farm and the woods." width="1862" height="845" fetchpriority="high" />
+    </picture>
+
+    <div class="hero-banner-cta reveal d1">
       <a class="btn btn-gold" href="#worlds">Explore the Stories</a>
-      <a class="btn btn-ghost-light" href="#watch">Watch Bedtime Stories</a>
+      <a class="btn btn-ghost" href="#watch">Watch Bedtime Stories</a>
     </div>
     <p class="hero-credit">A <b>Wisdom Production Group</b> company</p>
   </div>
-
-  <div class="scroll-hint" aria-hidden="true">Scroll<i></i></div>
 </section>
 
 <!-- ============================ RIBBON ============================ -->
