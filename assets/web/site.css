@@ -67,9 +67,10 @@ p{margin:0 0 1em}
   font-family:'Fredoka',sans-serif;font-weight:600;
   font-size:clamp(.72rem,1.3vw,.88rem);
   letter-spacing:.22em;text-transform:uppercase;
-  display:inline-flex;align-items:center;gap:.6em;margin-bottom:1rem;
+  display:inline-block;margin-bottom:1rem;
 }
-.eyebrow::before{content:"";width:26px;height:3px;border-radius:3px;background:currentColor;opacity:.55}
+/* the eyebrow used to carry a 26px bar in front of it, which read as an
+   em dash; the label now stands on its own letter-spacing */
 .h-mega{font-size:clamp(2.9rem,8.4vw,7rem);font-weight:800}
 .h-1{font-size:clamp(2.5rem,6.2vw,5rem);font-weight:800}
 .h-2{font-size:clamp(2rem,4.4vw,3.5rem);font-weight:800}
@@ -191,8 +192,7 @@ body.nav-open .mobile-nav{transform:translateY(0)}
     linear-gradient(180deg,rgba(24,6,46,.55) 0%,rgba(24,6,46,.1) 26%,rgba(24,6,46,.24) 62%,rgba(24,6,46,.72) 100%);
 }
 .hero-inner{position:relative;text-align:center;padding:calc(var(--header-h) + 1.6rem) 0 4.6rem;width:100%}
-.hero .eyebrow{color:var(--gold-light);justify-content:center;letter-spacing:.34em}
-.hero .eyebrow::before{background:var(--gold-light)}
+.hero .eyebrow{color:var(--gold-light);letter-spacing:.34em}
 /* the interim mark carries no wordmark, so the name is set in type below it */
 .hero-mark{
   position:relative;display:block;margin:0 auto .9rem;
@@ -242,7 +242,7 @@ section{position:relative}
 .sec{padding:clamp(3.6rem,6.4vw,6.5rem) 0}
 .sec-head{max-width:70ch;margin-bottom:clamp(2rem,3.6vw,3.2rem)}
 .sec-head.center{margin-inline:auto;text-align:center}
-.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center .eyebrow{text-align:center}
 
 /* ---------- decorative confetti circles (for plain cream sections) ---------- */
 .has-deco{overflow:hidden}
