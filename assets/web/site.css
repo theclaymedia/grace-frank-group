@@ -1011,7 +1011,13 @@ section{position:relative}
 .watch-cta{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:clamp(1.8rem,3.4vw,2.6rem)}
 
 /* contact form needs a textarea row the newsletter form never had */
-.contact-form{flex-direction:column;align-items:stretch;max-width:620px;margin-inline:auto}
+/* stacked, so the inputs must not inherit the newsletter row's flex-grow:
+   in a column that makes each field expand to fill the container height */
+.contact-form{
+  flex-direction:column;align-items:stretch;
+  max-width:620px;margin-inline:auto;gap:.9rem;
+}
+.contact-form input{flex:0 0 auto;width:100%;height:56px}
 .contact-form textarea{
   font:inherit;width:100%;padding:1.05em 1.3em;border-radius:var(--r-md);
   border:2px solid rgba(74,27,120,.16);background:#fff;color:var(--ink);
@@ -1054,3 +1060,64 @@ section{position:relative}
 @media (prefers-reduced-motion:reduce){
   .nav-drop{transition:none}
 }
+
+/* ============================================================
+   STORY CARDS  (stories.html)
+   One card per book carrying the cover, the world it opens and
+   the idea it turns on, so the page does not run a portal grid
+   and a book grid that both point at the same three pages.
+   ============================================================ */
+.storycards{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1.4rem,2.6vw,2.2rem);align-items:stretch;
+}
+.storycard{
+  background:#fff;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);display:flex;flex-direction:column;
+  transition:transform .45s cubic-bezier(.2,.9,.3,1.15),box-shadow .45s ease;
+}
+.storycard:hover{transform:scale(1.02);box-shadow:var(--shadow-md)}
+
+/* portrait, so a book cover reads as a book rather than a cropped strip */
+.sc-cover{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;background:var(--cream-deep)}
+.sc-cover img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;transition:transform .8s cubic-bezier(.2,.8,.3,1)}
+.storycard:hover .sc-cover img{transform:scale(1.05)}
+.sc-world{
+  position:absolute;left:1rem;bottom:1rem;z-index:2;
+  font-family:'Fredoka','Avenir Next','Segoe UI',system-ui,sans-serif;
+  font-weight:600;font-size:.76rem;letter-spacing:.1em;
+  background:rgba(20,8,40,.62);color:#fff;
+  padding:.5em 1em;border-radius:var(--r-pill);
+}
+/* placeholder cover, until Hope's artwork arrives */
+.sc-ph{
+  width:100%;height:100%;display:grid;place-content:center;gap:.6rem;text-align:center;padding:1.4rem;
+  background:repeating-linear-gradient(135deg,rgba(74,27,120,.04) 0 12px,transparent 12px 24px),
+             linear-gradient(170deg,#FFF7EC,#F6E9D6);
+  border-bottom:3px dashed rgba(74,27,120,.18);
+}
+.sc-ph img{width:74px;height:auto;margin-inline:auto;opacity:.9}
+.sc-ph span{font-family:'Fredoka','Avenir Next','Segoe UI',system-ui,sans-serif;font-size:.8rem;color:var(--purple);opacity:.7}
+
+.sc-body{padding:clamp(1.3rem,2.2vw,1.8rem);display:flex;flex-direction:column;gap:.55rem;flex:1}
+.sc-kicker{
+  font-family:'Fredoka','Avenir Next','Segoe UI',system-ui,sans-serif;font-weight:600;
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin:0;
+}
+.sc-body h3{font-size:clamp(1.2rem,2vw,1.5rem);color:var(--purple);margin:0}
+.sc-body h3 a{transition:color .25s ease}
+.sc-body h3 a:hover{color:var(--purple-bright)}
+.sc-tagline{
+  font-family:'Fredoka','Avenir Next','Segoe UI',system-ui,sans-serif;font-weight:500;
+  font-size:.96rem;line-height:1.45;color:var(--forest);margin:0;
+}
+.sc-chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.2rem}
+.sc-chips .chip{background:rgba(74,27,120,.07);color:var(--purple);border:0;font-size:.74rem}
+.sc-body .link-arrow{margin-top:auto;padding-top:.9rem;color:var(--teal);align-self:flex-start}
+
+.storycard.ocean .sc-world{background:rgba(10,70,95,.72)}
+.storycard.farm  .sc-world{background:rgba(60,85,30,.72)}
+.storycard.forest .sc-world{background:rgba(35,70,45,.72)}
+
+@media(max-width:980px){ .storycards{grid-template-columns:1fr 1fr} }
+@media(max-width:680px){ .storycards{grid-template-columns:1fr} }
