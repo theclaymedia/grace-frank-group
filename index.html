@@ -6,9 +6,9 @@
 <title>Kindessa™ | Stories Growing Kindness</title>
 <meta name="description" content="Kindessa brings magical stories by Grace Frank that help little hearts grow through kindness, courage and friendship. Meet Truly the Turtle, Gracie the Goose and Hope the Hedgehog." />
 <link rel="icon" href="assets/web/symbol.webp" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/baloo-2-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="assets/web/site.css" />
 </head>
 <body>
@@ -277,7 +277,7 @@
     </div>
 
     <div class="watch-grid">
-      <a class="episode feature reveal" href="#watch" aria-label="Play featured episode: A New Friend in Tidepool Town">
+      <a class="episode feature reveal" href="https://www.youtube.com/watch?v=m3otSoN2ZFE" target="_blank" rel="noopener" aria-label="Watch the featured episode on YouTube: A New Friend in Tidepool Town">
         <svg class="ep-art" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <defs>
             <linearGradient id="ep1" x1="0" y1="0" x2="0" y2="1">
@@ -304,44 +304,41 @@
       </a>
 
       <div class="ep-side">
-        <a class="episode small reveal d1" href="#watch" aria-label="Play episode: The Kelp Knot">
+        <div class="episode small soon-ep reveal d1">
           <svg class="ep-art" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <defs><linearGradient id="ep2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0E6C93"/><stop offset="100%" stop-color="#5FC8D4"/></linearGradient></defs>
             <rect width="400" height="250" fill="url(#ep2)"/>
             <g fill="#fff" opacity=".35"><circle cx="70" cy="180" r="9"/><circle cx="110" cy="140" r="5"/><circle cx="300" cy="90" r="7"/><circle cx="330" cy="150" r="4"/></g>
             <path d="M0 200 Q100 170 200 195 T400 180 L400 250 L0 250Z" fill="#0A5773" opacity=".8"/>
           </svg>
-          <span class="play" aria-hidden="true">▶</span>
-          <div><p class="ep-meta">Episode 2</p><p class="ep-title">The Kelp Knot</p></div>
-        </a>
+          <div><p class="ep-meta">Episode 2</p><p class="ep-title">The Kelp Knot</p><p class="ep-soon">Coming soon</p></div>
+        </div>
 
-        <a class="episode small reveal d2" href="#watch" aria-label="Play episode: The Octopus with Many Colors">
+        <div class="episode small soon-ep reveal d2">
           <svg class="ep-art" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <defs><linearGradient id="ep3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F7B733"/><stop offset="100%" stop-color="#7CC47F"/></linearGradient></defs>
             <rect width="400" height="250" fill="url(#ep3)"/>
             <circle cx="320" cy="70" r="34" fill="#FFF3D0" opacity=".8"/>
             <path d="M0 190 Q110 150 210 185 T400 165 L400 250 L0 250Z" fill="#4E9A5C"/>
           </svg>
-          <span class="play" aria-hidden="true">▶</span>
-          <div><p class="ep-meta">Episode 3</p><p class="ep-title">The Octopus with Many Colors</p></div>
-        </a>
+          <div><p class="ep-meta">Episode 3</p><p class="ep-title">The Octopus with Many Colors</p><p class="ep-soon">Coming soon</p></div>
+        </div>
 
-        <a class="episode small reveal d3" href="#watch" aria-label="Play episode: The Fish That Would Not Join In">
+        <div class="episode small soon-ep reveal d3">
           <svg class="ep-art" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <defs><linearGradient id="ep4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1F5B3A"/><stop offset="100%" stop-color="#8FBF6A"/></linearGradient></defs>
             <rect width="400" height="250" fill="url(#ep4)"/>
             <g fill="#123D28" opacity=".7"><rect x="40" y="60" width="18" height="190" rx="8"/><rect x="150" y="30" width="22" height="220" rx="10"/><rect x="300" y="70" width="16" height="180" rx="8"/></g>
             <g fill="#FFCF6B"><circle cx="220" cy="120" r="3.5"/><circle cx="260" cy="170" r="2.6"/><circle cx="100" cy="150" r="3"/></g>
           </svg>
-          <span class="play" aria-hidden="true">▶</span>
-          <div><p class="ep-meta">Episode 4</p><p class="ep-title">The Fish That Would Not Join In</p></div>
-        </a>
+          <div><p class="ep-meta">Episode 4</p><p class="ep-title">The Fish That Would Not Join In</p><p class="ep-soon">Coming soon</p></div>
+        </div>
       </div>
     </div>
 
     <div class="watch-foot reveal">
-      <a class="btn btn-gold" href="#watch">Watch Now</a>
-      <a class="btn btn-ghost-light" href="#watch">See All Stories</a>
+      <a class="btn btn-gold" href="https://www.youtube.com/watch?v=m3otSoN2ZFE" target="_blank" rel="noopener">Watch Episode One</a>
+      <a class="btn btn-ghost-light" href="https://www.youtube.com/@WisdomBedtimeStories" target="_blank" rel="noopener">Visit the Channel</a>
       <p class="watch-note">Made for little viewers. Loved by grown-ups, too.</p>
     </div>
   </div>
@@ -596,7 +593,7 @@
       </div>
       <div>
         <h4>Follow</h4>
-        <ul><li><a href="#watch">YouTube</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#join">Newsletter</a></li></ul>
+        <ul><li><a href="https://www.youtube.com/@WisdomBedtimeStories" target="_blank" rel="noopener">YouTube</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#join">Newsletter</a></li></ul>
       </div>
     </div>
 
