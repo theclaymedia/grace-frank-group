@@ -110,6 +110,17 @@
   /* the book tilt was removed: the cover is now a flat image with a CSS hover zoom */
 
 
+  /* ---------- contact form (mockup only) ---------- */
+  const cForm = document.getElementById('contactForm');
+  const cThanks = document.getElementById('contactThanks');
+  if (cForm && cThanks) cForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const email = cForm.querySelector('#cemail');
+    if (!email.value.includes('@')){ email.focus(); email.style.borderColor = 'var(--coral)'; return; }
+    cForm.style.display = 'none';
+    cThanks.classList.add('show');
+  });
+
   /* ---------- newsletter (mockup only) ---------- */
   const form = document.getElementById('joinForm');
   const thanks = document.getElementById('formThanks');
