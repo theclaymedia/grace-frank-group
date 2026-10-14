@@ -74,28 +74,8 @@
     }
   });
 
-  /* ---------- bubbles in any underwater section ---------- */
-  document.querySelectorAll('.bubbles').forEach(bubbleHost => {
-    // three size buckets — small, medium and big — so the water feels alive
-    const buckets = [
-      { count:26, min:5,  max:14, dur:[16,26] },   // small
-      { count:14, min:18, max:38, dur:[20,32] },   // medium
-      { count:7,  min:48, max:96, dur:[26,42] }    // big
-    ];
-    buckets.forEach(bucket => {
-      for (let i=0;i<bucket.count;i++){
-        const b = document.createElement('i');
-        const size = rand(bucket.min,bucket.max);
-        b.className = 'bubble';
-        b.style.width = b.style.height = size+'px';
-        b.style.left = rand(-2,99)+'%';
-        b.style.animationDuration = rand(bucket.dur[0],bucket.dur[1])+'s';
-        b.style.animationDelay = '-' + rand(0,30) + 's';
-        if (size > 44) b.classList.add('big');
-        bubbleHost.appendChild(b);
-      }
-    });
-  });
+  /* bubbles ship as assets/web/bubbles.mp4 and are no longer generated here */
+
 
   /* ---------- twilight stars in the bedtime section ---------- */
   const night = document.getElementById('night');
@@ -127,22 +107,8 @@
     if (!ticking){ ticking = true; requestAnimationFrame(frame); }
   }, {passive:true});
 
-  /* ---------- book tilt (pointer, desktop) ---------- */
-  const book = document.getElementById('book');
-  if (book && window.matchMedia('(hover:hover) and (pointer:fine)').matches){
-    const inner = book.querySelector('.book-inner');
-    book.addEventListener('pointermove', e => {
-      const r = book.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width - .5;
-      const py = (e.clientY - r.top) / r.height - .5;
-      inner.style.animation = 'none';
-      inner.style.transform = 'rotateY(' + (-10 + px * 18) + 'deg) rotateX(' + (4 - py * 14) + 'deg) scale(1.03)';
-    });
-    book.addEventListener('pointerleave', () => {
-      inner.style.transform = '';
-      inner.style.animation = '';
-    });
-  }
+  /* the book tilt was removed: the cover is now a flat image with a CSS hover zoom */
+
 
   /* ---------- newsletter (mockup only) ---------- */
   const form = document.getElementById('joinForm');
