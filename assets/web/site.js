@@ -1,5 +1,5 @@
 /* ============================================================
-   KINDESSA™ — shared behaviour
+   KINDESSA™ shared behaviour
    Shared by index.html, truly.html and gracie.html.
    Every hook is optional, so a page that omits a section
    simply skips that block.

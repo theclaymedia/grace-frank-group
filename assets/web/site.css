@@ -1,5 +1,5 @@
 /* ============================================================
-   KINDESSA™ — shared stylesheet
+   KINDESSA™ shared stylesheet
    A Grace Frank Group company. Books by Grace Frank.
    Full Kindessa logo is used on the website; the bare icon is
    reserved for social profiles while clearance and filing complete.
@@ -271,7 +271,7 @@ section{position:relative}
 .wave.bot{bottom:-1px}
 
 /* ============================================================
-   3. TRULY — first adventure (underwater)
+   3. TRULY, first adventure (underwater)
    ============================================================ */
 .truly{
   background:linear-gradient(180deg,#0E6C93 0%,#1590AE 32%,#3FB8C9 68%,#8FDCE0 100%);
@@ -399,7 +399,10 @@ section{position:relative}
   position:relative;
 }
 .stage:hover{transform:scale(1.03);box-shadow:var(--shadow-md)}
-.stage-emoji{font-size:3rem;line-height:1;display:block;margin-bottom:.4rem}
+/* the three stage icons are inline SVG rather than emoji, so they render
+   identically everywhere and can be lifted straight into Elementor */
+.stage-glyph{width:76px;height:76px;display:block;margin:0 auto .5rem;transition:transform .45s cubic-bezier(.2,.9,.3,1.2)}
+.stage:hover .stage-glyph{transform:scale(1.08)}
 .stage-age{font-family:'Fredoka',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:.9rem}
 .stage h3{color:var(--purple);margin-bottom:.2rem}
 .stage-kind{font-family:'Fredoka',sans-serif;font-weight:600;color:var(--forest);margin-bottom:.7rem;font-size:1.02rem}
@@ -411,8 +414,7 @@ section{position:relative}
 .stage.spiral h3{color:#fff}
 .stage.spiral .stage-age{color:var(--gold-light)}
 .stage.spiral .stage-kind{color:var(--lavender)}
-.spiral-glyph{width:74px;height:74px;margin:0 auto .6rem;display:block;transition:transform .45s ease}
-.spiral:hover .spiral-glyph{transform:scale(1.08)}
+
 .stage.spiral::after{
   content:"";position:absolute;inset:-40% 30% 40% -30%;
   background:radial-gradient(circle,rgba(201,167,232,.35),transparent 62%);animation:pulseGlow 7s ease-in-out infinite;
@@ -692,7 +694,7 @@ section{position:relative}
   .wrap,.header-inner{width:min(100% - 2.2rem,var(--maxw))}
   .stages,.circles,.res-grid{grid-template-columns:1fr}
   .stage{text-align:left}
-  .spiral-glyph,.stage-emoji{margin-left:0}
+  .stage-glyph{margin-left:0}
   /* swipeable world portals */
   .portals{
     grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;
