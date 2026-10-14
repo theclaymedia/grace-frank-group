@@ -931,22 +931,25 @@ section{position:relative}
 
 /* ============================================================
    BANNER HERO  (homepage)
-   Grace's banner is a finished composition with its own wordmark
-   and body copy, so it is shown whole rather than cropped, and the
-   page adds no competing headline. A portrait crop takes over on
-   phones, where the landscape version's text would be unreadable.
+   Grace's banner is a finished composition with its own wordmark and
+   body copy, so the page adds no competing headline. It runs full
+   bleed with no frame or shadow, and the section background is
+   sampled from the cream panel along the banner's bottom edge
+   (#FDFBF4) so the artwork and the button area below it read as one
+   continuous surface. The site's --cream is warmer and would seam.
+   A portrait crop takes over on phones, where the landscape
+   version's text would be unreadable.
    ============================================================ */
 .hero-banner{
-  padding-top:calc(80px + clamp(1rem,2.6vw,2rem));
+  padding-top:80px;                 /* clear the fixed solid header */
   padding-bottom:clamp(2rem,5vw,3.6rem);
   text-align:center;
+  background:#FDFBF4;
 }
-.hero-banner .wrap{max-width:1500px}
 .banner{display:block}
 .banner img{
-  width:100%;height:auto;margin-inline:auto;
-  border-radius:var(--r-md);
-  box-shadow:0 26px 70px rgba(74,27,120,.26),0 6px 18px rgba(74,27,120,.14);
+  display:block;width:100%;height:auto;
+  border-radius:0;box-shadow:none;
 }
 .hero-banner-cta{
   display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;
@@ -956,11 +959,6 @@ section{position:relative}
   color:var(--purple);opacity:.72;text-shadow:none;margin:0;
 }
 .hero-banner .hero-credit b{color:var(--teal)}
-
-@media(max-width:720px){
-  .hero-banner{padding-top:calc(80px + .9rem)}
-  .banner img{border-radius:var(--r-md)}
-}
 
 /* ============================================================
    CHARACTER POSTERS  (book pages)
