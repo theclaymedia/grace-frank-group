@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Node
+node_modules/
+
+# Other clients' documents — keep out of this repo
+Actnano*
+
+# Document generators and their assets (local tooling, not deliverables)
+_build/
+
+# Dev handoff pack (staged for Google Drive, not a repo deliverable)
+Kindessa-Elementor-Handoff/
+
+# Dev handoff zips (built on demand for Drive or email)
+Kindessa-Elementor-Handoff*.zip
+
+# Client-supplied originals (kept, never shipped)
+_raw/
