@@ -176,7 +176,8 @@ body.nav-open .burger span::after{transform:translateY(-8px) rotate(-45deg)}
   overflow-y:auto;
 }
 body.nav-open .mobile-nav{transform:translateY(0)}
-.mobile-nav a{font-family:'Baloo 2','Trebuchet MS','Segoe UI',system-ui,sans-serif;font-weight:700;font-size:clamp(1.9rem,8vw,2.8rem);color:var(--purple);padding:.18em 0;border-bottom:2px dashed rgba(74,27,120,.14)}
+/* :not(.btn) so the Join button keeps its button type instead of the menu-link size */
+.mobile-nav a:not(.btn){font-family:'Baloo 2','Trebuchet MS','Segoe UI',system-ui,sans-serif;font-weight:700;font-size:clamp(1.9rem,8vw,2.8rem);color:var(--purple);padding:.18em 0;border-bottom:2px dashed rgba(74,27,120,.14)}
 .mobile-nav .btn{margin-top:1.6rem;align-self:flex-start}
 
 /* ============================================================
@@ -655,7 +656,6 @@ section{position:relative}
 @keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.13)}28%{transform:scale(1)}42%{transform:scale(1.09)}}
 @keyframes driftZoom{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.13) translate3d(-1.4%,-1.6%,0)}}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  10%{opacity:.75}90%{opacity:.5}to{transform:translateY(-118vh) translateX(34px);opacity:0}}
 @keyframes fly{
   0%{opacity:0;transform:translate(0,0)}
   12%{opacity:.95}
@@ -708,6 +708,8 @@ section{position:relative}
   .swipe-hint{display:block}
   .watch-grid{grid-template-columns:1fr}
   .join-form{flex-direction:column}
+  /* in a column the inputs' 200px flex-basis becomes their height */
+  .join-form input{flex:0 0 auto}
   .join-form .btn{width:100%}
   .footer-top{grid-template-columns:1fr 1fr}
   .shop-grid{grid-template-columns:1fr}
