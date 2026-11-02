@@ -577,7 +577,7 @@ section{position:relative}
 }
 .creator h2{color:var(--purple);margin-bottom:1rem}
 .creator .eyebrow{color:var(--teal)}
-.sig{font-family:'Baloo 2','Trebuchet MS','Segoe UI',system-ui,sans-serif;font-weight:600;font-size:1.8rem;color:var(--purple-bright);transform:rotate(-3deg);display:inline-block;margin:.6rem 0 1.6rem}
+.sig{font-family:'Baloo 2','Trebuchet MS','Segoe UI',system-ui,sans-serif;font-weight:600;font-size:1.8rem;color:var(--purple-bright);display:inline-block;margin:.6rem 0 1.6rem}
 .creator-btns{display:flex;flex-wrap:wrap;gap:1rem}
 
 /* ============================================================
@@ -909,6 +909,7 @@ section{position:relative}
   border-left:4px solid rgba(255,255,255,.4);padding-left:1rem;
 }
 .passport-btns{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.8rem}
+.passport-unlock{margin:.8rem 0 0;font-size:.95rem;color:rgba(255,255,255,.82);max-width:34rem}
 .passport-waves{
   margin:1.6rem 0 0;font-family:'Baloo 2','Trebuchet MS','Segoe UI',system-ui,sans-serif;
   font-size:clamp(1.1rem,2.1vw,1.5rem);color:var(--gold-light);line-height:1.3;
